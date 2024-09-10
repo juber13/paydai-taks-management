@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
 import { useContext } from 'react';
-import { MyContext } from './Context';
-import { set } from 'y';
+import { MyContext } from './Context.jsx';
 
 const Header = () => {
     const {

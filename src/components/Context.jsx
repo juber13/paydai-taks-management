@@ -2,6 +2,7 @@
 import { createContext, useEffect, useState } from "react";
 export const MyContext = createContext();
 import toast from "react-hot-toast";
+
 export const ContextProvider = ({children}) => {
     const [isDarkMode , setIsDarkMode] = useState(false);
     const [taskLists , setTaskLists] = useState([]);
