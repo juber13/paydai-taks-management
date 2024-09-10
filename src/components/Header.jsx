@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div className={`header  bg-white  shadow-md border-b-2 p-2 ${ isDarkMode && "dark:bg-black text-white"} 
-    flex text-xs item-center justify-between sm:gap-3 text-black`}
+    flex text-xs sm:text-lg item-center justify-between sm:gap-3 text-black`}
     >
       <div className='filters flex flex-1  items-center justify-center gap-2  sm:gap-4'>
         <div className='flex gap-1 cursor-pointer'>

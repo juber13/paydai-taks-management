@@ -31,7 +31,7 @@ export const ContextProvider = ({children}) => {
     }
 
      const handleEdit = (id) => {
-      const  card  = taskLists.find(item =>  item.id === id)
+      const card = taskLists.find(item =>  item.id === id)
         setShowModel(true);
         setIsEditMode(true);
         setNewTask(card);
