@@ -42,7 +42,7 @@ const Card = () => {
             <div
               className={`card sm:w-[300px] max-w-xl h-[180px] ${
                 isDarkMode ? "bg-gray-800 text-white border-none" : "bg-white"
-              } border p-6 shadow-md`}
+              } border p-6 shadow-md relative`}
               key={index}
             >
               <div className='text-xl font-[300] flex justify-between h-full flex-col'>
@@ -83,14 +83,14 @@ const Card = () => {
                     <button
                       className={`border p-1 rounded-md ${
                         isDarkMode ? "text-white" : "text-black"
-                      } text-xs relative`}
+                      } text-xs `}
                       onClick={() => setConfirmDeleteId(list.id)} // Set the id of the task to delete
                     >
                       Delete
                     </button>
                     {confirmDeleteId === list.id && (
                       <div
-                        className={`absolute top-14 bg-white shadow-xl w-[200px] h-[150px] p-3 flex gap-3 items-center rounded-md justify-center flex-col`}
+                        className={`absolute  sm:top-40 sm:right-0 right-32 z-10 top-20 bg-white shadow-xl w-[200px] h-[150px] p-3 flex gap-3 items-center rounded-md justify-center flex-col`}
                       >
                         <h2 className='text-sm font-[400]'>
                           Do you really want to delete this
