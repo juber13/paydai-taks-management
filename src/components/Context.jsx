@@ -4,7 +4,7 @@ export const MyContext = createContext();
 import toast from "react-hot-toast";
 
 export const ContextProvider = ({children}) => {
-    const [isDarkMode , setIsDarkMode] = useState(false);
+    const [isDarkMode , setIsDarkMode] = useState(Boolean(localStorage.getItem('mode')));
     const [taskLists , setTaskLists] = useState([]);
     const [showModel , setShowModel] = useState(false);
     const [isEditMode , setIsEditMode] = useState(false);
@@ -53,9 +53,11 @@ export const ContextProvider = ({children}) => {
     },[])
 
     useEffect(() => {
-        if(taskLists.length > 0)
-        localStorage.setItem('tasks' , JSON.stringify(taskLists));
-    },[taskLists])
+        if(taskLists.length > 0){
+           localStorage.setItem('tasks' , JSON.stringify(taskLists));
+        }
+        localStorage.setItem("mode" , isDarkMode);
+    },[taskLists, isDarkMode])
 
     return (
       <MyContext.Provider value={{
